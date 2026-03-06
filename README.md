@@ -2,12 +2,23 @@
 
 Este projeto consiste em um pipeline de dados automatizado que extrai dados em tempo real da API CoinGecko, processa-os utilizando Python (Pandas) e armazena as informações em um banco de dados PostgreSQL, tudo orquestrado via Docker.
 
+O objetivo foi entender na prática o uso do Docker e Docker Compose para orquestrar um ambiente de Engenharia de Dados, resolvendo desafios reais de:
+
+- Comunicação entre serviços (Network).
+- Persistência de dados (Volumes).
+- Variáveis de ambiente e isolamento de processos.
+
 ## Arquitetura do Projeto
 
 - Linguagem: Python 3.11+
 - Bibliotecas: Pandas, SQLAlchemy, Requests.
 - Banco de Dados: PostgreSQL 17.
 - Infraestrutura: Docker e Docker Compose.
+
+### Resultado do SQL 
+<p align="center">
+<img width="1097" height="193" alt="image" src="https://github.com/user-attachments/assets/4e6fa5da-d5d3-4104-8eb7-13fe189a860a"  title="Resultado do SQl"/>
+</p>
 
 ## Como executar
 
@@ -23,7 +34,6 @@ docker-compose up --build
 
 ## Estrutura do Banco de Dados 
 
-
 **Tabela precos_cripto**: Armazena ID, Símbolo, Nome, Preço (USD), Market Cap e a data da carga.
 
 **View visao_dominancia**: Um cálculo SQL que mostra o percentual de market cap de cada moeda em relação ao total capturado.
@@ -35,7 +45,4 @@ docker-compose up --build
 
 - Data Lineage: Uso de data_carga para permitir análises históricas temporais.
 
-## Resultado do SQL 
-<p align="center">
-<img width="1097" height="193" alt="image" src="https://github.com/user-attachments/assets/4e6fa5da-d5d3-4104-8eb7-13fe189a860a"  title="Resultado do SQl"/>
-</p>
+
