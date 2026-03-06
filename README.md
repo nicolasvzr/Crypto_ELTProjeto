@@ -34,3 +34,8 @@ docker-compose up --build
 - Tratamento de Erros: Implementação de retentativas e logs para falhas de conexão com o banco.
 
 - Data Lineage: Uso de data_carga para permitir análises históricas temporais.
+
+## Resultado do SQL 
+<p align="center">
+<img width="1097" height="193" alt="image" src="https://github.com/user-attachments/assets/4e6fa5da-d5d3-4104-8eb7-13fe189a860a"  title="Resultado do SQl"/>
+</p>
